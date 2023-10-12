@@ -32,6 +32,7 @@ export const theme = {
     purple: "#5F41D9"
   },
   spacings: {
+    xxxxsmall: "0.5rem",
     xxxsmall: '0.75rem',
     xxsmall: '1.5rem',
     xsmall: '2rem',

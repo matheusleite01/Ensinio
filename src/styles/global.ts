@@ -33,6 +33,10 @@ body {
   font-family: ${theme.font.family.inter};
 }
 
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
 `
 
