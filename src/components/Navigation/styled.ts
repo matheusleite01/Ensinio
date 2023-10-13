@@ -7,9 +7,15 @@ export const Container = styled.ul`
   gap: ${theme.spacings.small};
 `;
 
+export const DropContainer = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+`;
+
 export const ListItens = styled.li`
-  transition: all .2s;
-  &:first-child{
+  transition: all 0.2s;
+  &:first-child {
     display: flex;
     align-items: center;
     font-size: ${theme.font.size.xsmall};
@@ -26,10 +32,9 @@ export const ListItens = styled.li`
     color: ${theme.colors.white};
     line-height: 105%;
     opacity: 0.9;
-    
   }
 
-  &:hover{
+  &:hover {
     transform: translateY(2px);
   }
 `;
