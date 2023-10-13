@@ -3,7 +3,7 @@ import Navigation from "../Navigation";
 import UserIcon from "../../../public/assets/icons/User-icon";
 import * as S from "./styled";
 import Button from "../Button";
-import LanguageDropdown from "../LanguageDropDown";
+import LanguageDropdown from "../LanguageDropdown";
 import Link from "next/link";
 
 const links = [

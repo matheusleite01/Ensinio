@@ -11,7 +11,7 @@ export const ButtonStyled = styled.button<ButtonProps>`
   padding: 12px 24px;
   background: ${({backgroundColor}) => backgroundColor};;
   border: ${({border}) => border};;
-  border-radius: ${theme.border.radius};
+  border-radius: ${theme.border.radius.large};
   cursor: pointer;
   transition: all .2s;
 

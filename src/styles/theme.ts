@@ -8,7 +8,11 @@ const inter = Inter({
 
 export const theme = {
   border: {
-    radius: '5rem'
+    radius: {
+      small: '0.375rem',
+      medium: '0.5rem',
+      large: '5rem',
+    }
   },
   font: {
     family: {
@@ -18,7 +22,9 @@ export const theme = {
     medium: 500,
     bold: 600,
     size: {
-      xxsmall: '0.75rem',
+      xxxxsmall: '0.75rem',
+      xxxsmall: "0.813rem",
+      xxsmall: "0.875rem",
       xsmall: '0.9375rem',
       small: '1rem',
       medium: '2rem',
