@@ -5,6 +5,11 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 1200px){
+    position: absolute;
+    top: 45px;
+    right: 100px;
+  }
 `;
 
 export const LanguageDefault = styled.div`

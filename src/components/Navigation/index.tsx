@@ -2,7 +2,7 @@ import { Container, ListItens, DropContainer } from "./styled";
 import Link from "next/link";
 import Polygon from "../../../public/assets/icons/Polygon-icon";
 import CustomDropDown from "../CustomDropdown";
-import EadIcon from "../../../public/assets/icons/Ead-icon";
+import EadIcon from "../../../public/assets/icons/ead-icon";
 import IconSocial from "../../../public/assets/icons/icon-social";
 import IconGamification from "../../../public/assets/icons/icon-gamification";
 import IconApp from "../../../public/assets/icons/icon-app";

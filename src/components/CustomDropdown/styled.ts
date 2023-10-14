@@ -8,6 +8,12 @@ export const Container = styled.div`
   padding: 44px 48px;
   background: ${theme.colors.white};
   border-radius: ${theme.border.radius.small};
+  @media screen and (max-width: 1200px) {
+    position: relative;
+    top: 0;
+    background: none;
+    padding: 0 0 20px 0;
+  }
 `;
 
 export const Title = styled.h3`
@@ -18,6 +24,9 @@ export const Title = styled.h3`
   letter-spacing: 0.13125rem;
   text-transform: uppercase;
   margin-bottom: ${theme.spacings.small};
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const List = styled.ul`
@@ -25,6 +34,9 @@ export const List = styled.ul`
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   gap: ${theme.spacings.small};
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ListItem = styled.li`
@@ -44,10 +56,16 @@ export const Text = styled.p`
   color: ${theme.colors.black};
   line-height: 125%;
   letter-spacing: 0.075px;
+  @media screen and (max-width: 1200px) {
+    color: ${theme.colors.white};
+  }
 `;
 
 export const SubText = styled.span`
   font-size: ${theme.font.size.xxxsmall};
   font-weight: ${theme.font.normal};
   color: ${theme.colors.grey};
+  @media screen and (max-width: 1200px) {
+    color: rgb(221, 221, 221);;
+  }
 `;

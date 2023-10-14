@@ -5,6 +5,7 @@ import * as S from "./styled";
 import Button from "../Button";
 import LanguageDropdown from "../LanguageDropdown";
 import Link from "next/link";
+import useHeader from "./hooks/useHeader";
 
 const links = [
   { name: "Preços", path: "/preco" },
@@ -14,13 +15,19 @@ const links = [
 ];
 
 const Header = () => {
+  const { isOpenMenuHamburger, setIsopenMenuHamburger } = useHeader();
+
   return (
     <S.Container>
       <S.ItensContainer className="container">
         <Link href="/">
           <LogoIcon />
         </Link>
-        <S.ItensContainer>
+        <S.MenuHamburger
+          className={isOpenMenuHamburger ? "active" : ""}
+          onClick={() => setIsopenMenuHamburger(!isOpenMenuHamburger)}
+        ></S.MenuHamburger>
+        <S.NavContainer className={isOpenMenuHamburger ? "openMenu" : ""}>
           <Navigation links={links} />
           <S.Line></S.Line>
           <S.ItensContainer>
@@ -28,15 +35,17 @@ const Header = () => {
               <UserIcon /> Entrar
             </S.ButtonEnter>
             <Button
-              color="white"
-              backgroundColor="none"
-              border="1px solid rgb(255,255,255, 0.5)"
+              color={isOpenMenuHamburger ? "#130C25" : "white"}
+              backgroundColor={isOpenMenuHamburger ? "#00E1E7" : "none"}
+              border={
+                isOpenMenuHamburger ? "none" : "1px solid rgb(255,255,255, 0.5)"
+              }
             >
               Começar Agora
             </Button>
             <LanguageDropdown />
           </S.ItensContainer>
-        </S.ItensContainer>
+        </S.NavContainer>
       </S.ItensContainer>
     </S.Container>
   );

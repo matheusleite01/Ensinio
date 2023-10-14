@@ -5,12 +5,23 @@ export const Container = styled.ul`
   display: flex;
   align-items: center;
   gap: ${theme.spacings.small};
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    
+  }
 `;
 
 export const DropContainer = styled.div`
+  width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    
+  }
 `;
 
 export const ListItens = styled.li`
@@ -18,6 +29,7 @@ export const ListItens = styled.li`
   &:first-child {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-size: ${theme.font.size.xsmall};
     font-weight: ${theme.font.medium};
     color: ${theme.colors.white};
@@ -36,5 +48,17 @@ export const ListItens = styled.li`
 
   &:hover {
     transform: translateY(2px);
+  }  
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    padding: 2rem 0px;
+    border-top: 1px solid rgb(90, 147, 224);
+    a {
+      font-size: 100%;
+      font-size: ${theme.font.size.small};
+    }
+    &:first-child {
+      font-size: ${theme.font.size.small};
+    }
   }
 `;
