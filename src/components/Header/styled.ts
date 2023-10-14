@@ -6,10 +6,13 @@ export const Container = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2.25rem 2rem;
+  padding: 1.5rem 2rem;
   background: rgba(0, 0, 0, 0.03);
   backdrop-filter: blur(15px);
   z-index: 1;
+  @media screen and (max-width: 1200px) {
+    padding: 2.25rem 2rem;
+  }
 `;
 
 export const ItensContainer = styled.div`

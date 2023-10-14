@@ -51,3 +51,21 @@ export const spanVideo = styled.span`
     transform: translateY(3px);
   }
 `;
+
+export const CardContainer = styled.section`
+  max-width: 1440px;
+  margin: 104px auto 0 auto;
+  padding: 10px;
+`
+export const SubContentContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap-reverse;
+  gap: ${theme.spacings.small};
+  justify-content: space-between;
+`
+
+export const SpanContent = styled.span`
+font-size: 1rem;
+    color: ${theme.colors.grey};
+    line-height: 150%; 
+`

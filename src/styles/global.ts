@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import {theme} from "./theme";
-
+import { theme } from "./theme";
 
 const GlobalStyles = createGlobalStyle`
 *,
@@ -18,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 ul {
@@ -38,6 +38,19 @@ body {
   margin: 0 auto;
 }
 
-`
+@media screen and (max-width:1400px){
+  html {
+  font-size: 88.5%;
+}
+
+ }
+@media screen and (max-width:420px){
+  html {
+  font-size: 81.25%;
+}
+
+}
+
+`;
 
 export default GlobalStyles;

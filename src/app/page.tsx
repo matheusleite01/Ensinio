@@ -7,6 +7,7 @@ import Button from "@/components/Button";
 import Image from "next/image";
 import picture from "../../public/img/menImg.png";
 import imgBg from "../../public/assets/icons/Icons-bg.svg";
+import SideContent from "@/components/SideContent";
 
 const HeroOptions = {
   subText: "plataforma all in one",
@@ -40,6 +41,15 @@ const Home = () => {
           </S.HeroSection>
         </div>
       </S.HeroContainer>
+      <S.CardContainer>
+        <S.SubContentContainer>
+          <SideContent
+            text={"pensamos em cada detalhe"}
+            title={"Queremos que o aluno se sinta confortável enquanto aprende"}
+          />
+          <S.SpanContent>Conheça alguns dos nossos recursos ⚡️</S.SpanContent>
+        </S.SubContentContainer>
+      </S.CardContainer>
     </>
   );
 };

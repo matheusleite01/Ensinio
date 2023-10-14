@@ -5,6 +5,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${theme.spacings.medium};
+  @media screen and (max-width: 1066px){
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 export const SpanContainer = styled(Container)`
