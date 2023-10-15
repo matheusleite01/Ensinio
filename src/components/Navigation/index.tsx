@@ -39,14 +39,14 @@ const options = [
 ];
 
 const Navigation = ({ links }: NavigationProps) => {
-  const { isOpenDropdown, setIsOpenDropdown } = useNavigation();
+  const { isOpenDropdown, setIsOpenDropdown, t } = useNavigation();
 
   return (
     <nav>
       <Container>
         <DropContainer>
           <ListItens onClick={() => setIsOpenDropdown(!isOpenDropdown)}>
-            Soluções <Polygon />
+            {t("Soluções")} <Polygon />
           </ListItens>
           {isOpenDropdown && (
             <CustomDropDown title="SOLUÇÕES PRINCIPAIS" options={options} />
@@ -54,7 +54,7 @@ const Navigation = ({ links }: NavigationProps) => {
         </DropContainer>
         {links.map(({ name, path }) => (
           <ListItens key={name}>
-            <Link href={/*path*/ "#"}>{name}</Link>
+            <Link href={/*path*/ "#"}>{t(name)}</Link>
           </ListItens>
         ))}
       </Container>

@@ -1,15 +1,17 @@
+import { useTranslation } from "react-i18next";
 import { Container, Text, Title } from "./styled";
 
 type SideContentProps = {
-  text: String;
-  title: String;
+  text: string;
+  title: string;
 };
 
 const SideContent = ({ text, title }: SideContentProps) => {
+  const {t} = useTranslation();
   return (
     <Container>
-      <Text>{text}</Text>
-      <Title>{title}</Title>
+      <Text>{t(text)}</Text>
+      <Title>{t(title)}</Title>
     </Container>
   );
 };

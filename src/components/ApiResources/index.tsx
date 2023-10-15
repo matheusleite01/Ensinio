@@ -7,7 +7,7 @@ import Skeleton from "../Skeleton";
 import ErrorMessage from "../ErrorMessage";
 
 const ApiResources = () => {
-  const { data, loading, error } = useApiResources();
+  const { data, loading, error, language } = useApiResources();
 
   return (
     <div>
@@ -18,22 +18,30 @@ const ApiResources = () => {
           <Skeleton lines={4} spacings={10} height={16} />
         </S.ContainerSkeleton>
       )}
-      {error && <ErrorMessage/>}
-      { data && (
+      {error && <ErrorMessage />}
+      {data && (
         <S.Container>
           {data.map(({ id, title, description }) => (
             <S.ListItem key={id}>
-              {id === 1 && <IconTrilhas/>}
-              {id === 2 && <IconPlaylists/>}
-              {id === 3 && <IconFolder/>}
+              {id === 1 && <IconTrilhas />}
+              {id === 2 && <IconPlaylists />}
+              {id === 3 && <IconFolder />}
               <div>
-                <S.Title>{title.pt}</S.Title>
-                <S.Text>{description.pt}</S.Text>
+                <S.Title>
+                  {language === "pt" && title.pt}
+                  {language === "en" && title.en}
+                  {language === "es" && title.es}
+                </S.Title>
+                <S.Text>
+                  {language === "pt" && description.pt}
+                  {language === "en" && description.en}
+                  {language === "es" && description.es}
+                </S.Text>
               </div>
             </S.ListItem>
-          ))} 
+          ))}
         </S.Container>
-          )}
+      )}
     </div>
   );
 };

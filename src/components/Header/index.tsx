@@ -15,7 +15,7 @@ const links = [
 ];
 
 const Header = () => {
-  const { isOpenMenuHamburger, setIsopenMenuHamburger } = useHeader();
+  const { isOpenMenuHamburger, setIsopenMenuHamburger, t } = useHeader();
 
   return (
     <S.Container>
@@ -32,7 +32,7 @@ const Header = () => {
           <S.Line></S.Line>
           <S.ItensContainer>
             <S.ButtonEnter>
-              <UserIcon /> Entrar
+              <UserIcon /> {t("Entrar")}
             </S.ButtonEnter>
             <Button
               color={isOpenMenuHamburger ? "#130C25" : "white"}
@@ -41,7 +41,7 @@ const Header = () => {
                 isOpenMenuHamburger ? "none" : "1px solid rgb(255,255,255, 0.5)"
               }
             >
-              Começar Agora
+              {t("Começar agora")}
             </Button>
             <LanguageDropdown />
           </S.ItensContainer>

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import * as S from './styled';
 
 type DropdownProps = {
@@ -11,6 +12,8 @@ type DropdownProps = {
 
 const CustomDropDown = ({ title, options }: DropdownProps) => {
 
+  const {t} = useTranslation();
+
   return (
     <S.Container>
       <S.Title>{title}</S.Title>
@@ -19,8 +22,8 @@ const CustomDropDown = ({ title, options }: DropdownProps) => {
         <S.ListItem key={text}>
           {icon}
           <div>
-            <S.Text>{text}</S.Text>
-            <S.SubText>{subText}</S.SubText>
+            <S.Text>{t(text)}</S.Text>
+            <S.SubText>{t(subText)}</S.SubText>
           </div>
         </S.ListItem>)}
       </S.List>

@@ -9,6 +9,7 @@ import picture from "../../public/img/menImg.png";
 import imgBg from "../../public/assets/icons/Icons-bg.svg";
 import SideContent from "@/components/SideContent";
 import ApiResources from "@/components/ApiResources";
+import { useTranslation } from "react-i18next";
 
 const HeroOptions = {
   subText: "plataforma all in one",
@@ -18,6 +19,7 @@ const HeroOptions = {
 };
 
 const Home = () => {
+  const {t} = useTranslation();
   return (
     <>
       <S.HeroContainer>
@@ -30,11 +32,11 @@ const Home = () => {
               <HeroTitle HeroOptions={HeroOptions} />
               <S.ButtonContainer>
                 <Button backgroundColor="#00E1E7" color="#130C25" border="none">
-                  Começar agora
+                  {t("Começar agora")}
                 </Button>
                 <S.spanVideo>
                   <PlayIcon />
-                  Ver vídeo
+                  {t("Ver vídeo")}
                 </S.spanVideo>
               </S.ButtonContainer>
             </div>
@@ -48,7 +50,7 @@ const Home = () => {
             text={"pensamos em cada detalhe"}
             title={"Queremos que o aluno se sinta confortável enquanto aprende"}
           />
-          <S.SpanContent>Conheça alguns dos nossos recursos ⚡️</S.SpanContent>
+          <S.SpanContent>{t("Conheça alguns dos nossos recursos")} ⚡️</S.SpanContent>
         </S.SubContentContainer>
         <ApiResources/>
       </S.CardContainer>

@@ -1,7 +1,9 @@
 import {useState, useEffect} from 'react'
+import { useTranslation } from 'react-i18next';
 
 const useHeader = () => {
   const [isOpenMenuHamburger, setIsopenMenuHamburger] = useState(false);
+  const {t} = useTranslation();
 
   useEffect(() => {
     const handleResizeWindow = () => {
@@ -18,7 +20,8 @@ const useHeader = () => {
   
   return{
     isOpenMenuHamburger,
-    setIsopenMenuHamburger
+    setIsopenMenuHamburger,
+    t
   }
 }
 

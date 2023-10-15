@@ -16,6 +16,9 @@ export type DataReourcesModal = {
 
 const useApiResources = () => {
   const {data, loading, error} = useAppSelector(state => state.resources);
+  const {language} = useAppSelector(state => state.language);
+
+  
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -25,7 +28,8 @@ const useApiResources = () => {
   return {
     data, 
     loading, 
-    error
+    error,
+    language
   }
 }
 
