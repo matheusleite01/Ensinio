@@ -4,6 +4,8 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "@/styles/theme";
 import GlobalStyles from "@/styles/global";
 import Header from "@/components/Header";
+import { Provider } from "react-redux";
+import store from "@/redux/configureStore";
 
 export default function RootLayout({
   children,
@@ -15,9 +17,11 @@ export default function RootLayout({
       <body>
         <ThemeProvider theme={theme}>
           <StyledComponentsRegistry>
-            <GlobalStyles />
-            <Header />
-            <main>{children}</main>
+            <Provider store={store}>
+              <GlobalStyles />
+              <Header />
+              <main>{children}</main>
+            </Provider>
           </StyledComponentsRegistry>
         </ThemeProvider>
       </body>
