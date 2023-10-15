@@ -43,6 +43,14 @@ export const ButtonLanguage = styled.button`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
+  &.active{
+    background: linear-gradient(
+      90deg,
+      rgb(95, 65, 217) -880.48%,
+      rgba(95, 65, 217, 0) 100%
+    );
+  }
+
   &:hover {
     background: linear-gradient(
       90deg,

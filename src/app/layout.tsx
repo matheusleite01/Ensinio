@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import { Provider } from "react-redux";
 import store from "@/redux/configureStore";
 import Footer from "@/components/Footer";
-import Skeleton from "@/components/Skeleton";
+import '@/utils/i18n';
 
 export default function RootLayout({
   children,

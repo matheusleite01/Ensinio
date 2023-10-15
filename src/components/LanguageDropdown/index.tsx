@@ -13,22 +13,22 @@ const languages = [
 ];
 
 const LanguageDropdown = () => {
-  const { isOpenDropDown, setIsOpenDropDown } = useLanguageDropdown();
+  const { isOpenDropDown, setIsOpenDropDown, handleChangeLanguage, language } = useLanguageDropdown();
 
   return (
     <S.Container>
       <S.LanguageDefault onClick={() => setIsOpenDropDown(!isOpenDropDown)}>
-        <span>PT</span> <Polygon />
+        <span>{language.toUpperCase()}</span> <Polygon />
       </S.LanguageDefault>
       <S.BgLanguage>
         {isOpenDropDown &&
           languages.map(({ name, icon }) => (
-            <S.ButtonLanguage key={name}>
+            <S.ButtonLanguage className={language.toUpperCase() === name ? 'active' : ''} key={name} onClick={handleChangeLanguage}>
               <S.Info>
                 {icon}
                 <span>{name}</span>
               </S.Info>
-              <CheckIcon />
+              {language.toUpperCase() === name && <CheckIcon />}
             </S.ButtonLanguage>
           ))}
       </S.BgLanguage>
