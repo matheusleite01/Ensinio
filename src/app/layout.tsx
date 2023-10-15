@@ -6,6 +6,8 @@ import GlobalStyles from "@/styles/global";
 import Header from "@/components/Header";
 import { Provider } from "react-redux";
 import store from "@/redux/configureStore";
+import Footer from "@/components/Footer";
+import Skeleton from "@/components/Skeleton";
 
 export default function RootLayout({
   children,
@@ -21,6 +23,7 @@ export default function RootLayout({
               <GlobalStyles />
               <Header />
               <main>{children}</main>
+              <Footer/>
             </Provider>
           </StyledComponentsRegistry>
         </ThemeProvider>

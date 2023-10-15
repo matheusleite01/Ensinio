@@ -38,6 +38,19 @@ body {
   margin: 0 auto;
 }
 
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: white; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #16d4d9;
+}
+
+
 @media screen and (max-width:1400px){
   html {
   font-size: 88.5%;
