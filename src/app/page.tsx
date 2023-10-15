@@ -8,6 +8,7 @@ import Image from "next/image";
 import picture from "../../public/img/menImg.png";
 import imgBg from "../../public/assets/icons/Icons-bg.svg";
 import SideContent from "@/components/SideContent";
+import ApiResources from "@/components/ApiResources";
 
 const HeroOptions = {
   subText: "plataforma all in one",
@@ -49,6 +50,7 @@ const Home = () => {
           />
           <S.SpanContent>Conheça alguns dos nossos recursos ⚡️</S.SpanContent>
         </S.SubContentContainer>
+        <ApiResources/>
       </S.CardContainer>
     </>
   );

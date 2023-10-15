@@ -1,7 +1,8 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import resources from "./reducers/apiResources";
 
-const reducer = combineReducers({})
+const reducer = combineReducers({resources})
 const store = configureStore({reducer})
 
 
