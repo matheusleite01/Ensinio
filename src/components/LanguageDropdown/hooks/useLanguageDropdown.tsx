@@ -17,8 +17,10 @@ const useLanguageDropdown = () => {
   };
 
   useEffect(() => {
+    const initial = window.localStorage.getItem("language");
+    dispatch(changeLanguage(initial ? initial : language));
     i18n.changeLanguage(language);
-  }, [i18n, language]);
+  }, [i18n, language, dispatch]);
 
   return {
     isOpenDropDown,
