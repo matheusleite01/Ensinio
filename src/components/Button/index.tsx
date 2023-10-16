@@ -8,7 +8,12 @@ export type ButtonProps = {
   border?: string;
 };
 
-const Button = ({ children, backgroundColor, color, border }: ButtonProps) => {
+const Button = ({
+  children,
+  backgroundColor = "#00E1E7",
+  color = "black",
+  border = "none",
+}: ButtonProps) => {
   return (
     <ButtonStyled
       backgroundColor={backgroundColor}

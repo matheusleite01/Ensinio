@@ -5,6 +5,7 @@ import UsaIcon from "../../../public/assets/icons/usa-icon";
 import SpainIcon from "../../../public/assets/icons/spain-icon";
 import CheckIcon from "../../../public/assets/icons/Check-icon";
 import useLanguageDropdown from "./hooks/useLanguageDropdown";
+import useOutsideClick from "@/hooks/useOutsideClick";
 
 const languages = [
   { name: "PT", icon: <BrazilIcon /> },
@@ -13,16 +14,15 @@ const languages = [
 ];
 
 const LanguageDropdown = () => {
-  const { isOpenDropDown, setIsOpenDropDown, handleChangeLanguage, language } = useLanguageDropdown();
+  const { isOpenDropDown, setIsOpenDropDown, handleChangeLanguage, language, ref } = useLanguageDropdown();
 
   return (
-    <S.Container>
+    <S.Container ref={ref}>
       <S.LanguageDefault onClick={() => setIsOpenDropDown(!isOpenDropDown)}>
         <span>{language.toUpperCase()}</span> <Polygon />
       </S.LanguageDefault>
-      <S.BgLanguage>
-        {isOpenDropDown &&
-          languages.map(({ name, icon }) => (
+        {isOpenDropDown && <S.BgLanguage>
+          {languages.map(({ name, icon }) => (
             <S.ButtonLanguage className={language.toUpperCase() === name ? 'active' : ''} key={name} onClick={handleChangeLanguage}>
               <S.Info>
                 {icon}
@@ -30,8 +30,8 @@ const LanguageDropdown = () => {
               </S.Info>
               {language.toUpperCase() === name && <CheckIcon />}
             </S.ButtonLanguage>
-          ))}
-      </S.BgLanguage>
+          ))} </S.BgLanguage>}
+     
     </S.Container>
   );
 };

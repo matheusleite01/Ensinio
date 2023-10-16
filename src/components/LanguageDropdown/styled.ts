@@ -1,13 +1,34 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { theme } from "@/styles/theme";
+
+const anima = keyframes`
+ 0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const animaButton = keyframes`
+ 0%{
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 
 export const Container = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  @media screen and (max-width: 1200px){
+  @media screen and (max-width: 1200px) {
     position: absolute;
-    top: 45px;
+    top: 43px;
     right: 100px;
   }
 `;
@@ -19,7 +40,6 @@ export const LanguageDefault = styled.div`
   color: ${theme.colors.white};
   cursor: pointer;
   transition: all 0.2s;
-
   &:hover {
     transform: translateY(2px);
   }
@@ -30,6 +50,7 @@ export const BgLanguage = styled.div`
   top: 50px;
   background: ${theme.colors.white};
   border-radius: 8px;
+  animation: 0.5s ease 0s 1 normal none running ${anima};
 `;
 
 export const ButtonLanguage = styled.button`
@@ -42,8 +63,9 @@ export const ButtonLanguage = styled.button`
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  animation: 1s ease 0s 1 normal none running ${animaButton};
 
-  &.active{
+  &.active {
     background: linear-gradient(
       90deg,
       rgb(95, 65, 217) -880.48%,

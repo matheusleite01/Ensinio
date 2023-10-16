@@ -6,10 +6,11 @@ import * as S from "./styled";
 import Button from "@/components/Button";
 import Image from "next/image";
 import picture from "../../public/img/menImg.png";
-import imgBg from "../../public/assets/icons/Icons-bg.svg";
 import SideContent from "@/components/SideContent";
 import ApiResources from "@/components/ApiResources";
 import { useTranslation } from "react-i18next";
+import IconPlaylists from "../../public/assets/icons/icon-playlists";
+import IconCertified from "../../public/assets/icons/icon-certified";
 
 const HeroOptions = {
   subText: "plataforma all in one",
@@ -24,9 +25,13 @@ const Home = () => {
     <>
       <S.HeroContainer>
         <div className="container">
-          <S.ImgBg>
-            <Image src={imgBg} alt="imgBg" />
-          </S.ImgBg>
+          <S.IconBg>
+            <IconPlaylists/>
+            <IconCertified/>
+            <IconCertified/>
+            <IconPlaylists/>
+            <IconPlaylists/>
+          </S.IconBg>
           <S.HeroSection>
             <div>
               <HeroTitle HeroOptions={HeroOptions} />

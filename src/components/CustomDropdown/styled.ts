@@ -1,5 +1,26 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { theme } from "@/styles/theme";
+
+const anima = keyframes`
+ 0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const animaItens = keyframes`
+ 0%{
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+`;
 
 export const Container = styled.div`
   position: absolute;
@@ -8,6 +29,7 @@ export const Container = styled.div`
   padding: 44px 48px;
   background: ${theme.colors.white};
   border-radius: ${theme.border.radius.small};
+  animation: 0.5s ease 0s 1 normal none running ${anima};
   @media screen and (max-width: 1200px) {
     position: relative;
     top: 0;
@@ -45,6 +67,18 @@ export const ListItem = styled.li`
   gap: 1rem;
   transition: all 0.2s;
   cursor: pointer;
+  &:nth-child(1){
+    animation: 0.3s ease 0s 1 normal none running ${animaItens};
+  }
+  &:nth-child(2){
+    animation: 0.6s ease 0s 1 normal none running ${animaItens};
+  }
+  &:nth-child(3){
+    animation: 0.9s ease 0s 1 normal none running ${animaItens};
+  }
+  &:nth-child(4){
+    animation: 0.9s ease 0s 1 normal none running ${animaItens};
+  }
   &:hover {
     transform: translateY(2px);
   }
@@ -66,6 +100,6 @@ export const SubText = styled.span`
   font-weight: ${theme.font.normal};
   color: ${theme.colors.grey};
   @media screen and (max-width: 1200px) {
-    color: rgb(221, 221, 221);;
+    color: rgb(221, 221, 221);
   }
 `;

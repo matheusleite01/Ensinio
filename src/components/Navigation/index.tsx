@@ -49,7 +49,7 @@ const Navigation = ({ links }: NavigationProps) => {
             {t("Soluções")} <Polygon />
           </ListItens>
           {isOpenDropdown && (
-            <CustomDropDown title="SOLUÇÕES PRINCIPAIS" options={options} />
+            <CustomDropDown title="SOLUÇÕES PRINCIPAIS" options={options} callback={setIsOpenDropdown} />
           )}
         </DropContainer>
         {links.map(({ name, path }) => (

@@ -1,5 +1,17 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { theme } from "@/styles/theme";
+
+
+const anima = keyframes`
+  from{
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
 
 export const Container = styled.div`
   display: flex;
@@ -15,6 +27,7 @@ export const SpanContainer = styled(Container)`
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+  animation: ${anima} 1.5s ease-in-out;
 `;
 
 export const SubText = styled.span`
@@ -34,6 +47,10 @@ export const Title = styled.h1`
   color: ${theme.colors.white};
   line-height: 110%;
   letter-spacing: -1.32px;
+  animation: ${anima} 2s ease-in-out;
+  @media screen and (max-width: 280px){
+   font-size: 2.2rem;
+  }
 `;
 
 export const Text = styled.p`
