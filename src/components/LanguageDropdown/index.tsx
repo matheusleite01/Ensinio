@@ -18,7 +18,7 @@ const LanguageDropdown = () => {
 
   return (
     <S.Container ref={ref}>
-      <S.LanguageDefault onClick={() => setIsOpenDropDown(!isOpenDropDown)}>
+      <S.LanguageDefault role={`default${language}`} onClick={() => setIsOpenDropDown(!isOpenDropDown)}>
         <span>{language.toUpperCase()}</span> <Polygon />
       </S.LanguageDefault>
         {isOpenDropDown && <S.BgLanguage role="languageDropdown">
@@ -31,7 +31,6 @@ const LanguageDropdown = () => {
               {language.toUpperCase() === name && <CheckIcon />}
             </S.ButtonLanguage>
           ))} </S.BgLanguage>}
-     
     </S.Container>
   );
 };
