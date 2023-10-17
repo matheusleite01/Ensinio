@@ -21,7 +21,7 @@ const LanguageDropdown = () => {
       <S.LanguageDefault onClick={() => setIsOpenDropDown(!isOpenDropDown)}>
         <span>{language.toUpperCase()}</span> <Polygon />
       </S.LanguageDefault>
-        {isOpenDropDown && <S.BgLanguage>
+        {isOpenDropDown && <S.BgLanguage role="languageDropdown">
           {languages.map(({ name, icon }) => (
             <S.ButtonLanguage className={language.toUpperCase() === name ? 'active' : ''} key={name} onClick={handleChangeLanguage}>
               <S.Info>

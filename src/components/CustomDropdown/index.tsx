@@ -19,7 +19,7 @@ const CustomDropDown = ({ title, options, callback }: DropdownProps) => {
     useOutsideClick(ref,callback);
 
   return (
-    <S.Container ref={ref}>
+    <S.Container ref={ref} role='customDropdown'>
       <S.Title>{title}</S.Title>
       <S.List>
         {options.map(({text, subText, icon}) => 
