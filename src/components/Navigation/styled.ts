@@ -75,7 +75,7 @@ export const ListItens = styled.li`
     width: 100%;
     padding: 2rem 0px;
     border-top: 1px solid rgb(90, 147, 224);
-    animation: ${animaMobile} 1s forwards;
+    animation: ${animaMobile} 1s;
 
     a {
       font-size: 100%;
