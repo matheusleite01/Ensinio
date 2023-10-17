@@ -11,6 +11,7 @@ import ApiResources from "@/components/ApiResources";
 import { useTranslation } from "react-i18next";
 import IconPlaylists from "../../public/assets/icons/icon-playlists";
 import IconCertified from "../../public/assets/icons/icon-certified";
+import Helmet from "react-helmet";
 
 const HeroOptions = {
   subText: "plataforma all in one",
@@ -23,6 +24,9 @@ const Home = () => {
   const {t} = useTranslation();
   return (
     <>
+    <Helmet>
+        <title>Ensinio</title>
+    </Helmet>
       <S.HeroContainer>
         <div className="container">
           <S.IconBg>

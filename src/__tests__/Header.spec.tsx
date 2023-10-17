@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import "@/utils/i18n";
-import { render, screen } from "@testing-library/react";
-import Header from "../../components/Header/index";
+import { fireEvent, render, screen } from "@testing-library/react";
+import Header from "../components/Header/index";
 import { Provider } from "react-redux";
 import UserEvent from "@testing-library/user-event";
 import store from "@/redux/configureStore";

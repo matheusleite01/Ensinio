@@ -47,7 +47,7 @@ export const DropContainer = styled.div`
 
 export const ListItens = styled.li`
   transition: all 0.2s;
-  animation: ${anima} 3s forwards;
+  animation: ${anima} 3s;
   &:first-child {
     display: flex;
     align-items: center;
