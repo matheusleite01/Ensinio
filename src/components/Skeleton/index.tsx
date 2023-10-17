@@ -8,9 +8,9 @@ export type SkeletonProps = {
 
 const Skeleton = ({ lines = 5, height = 20, spacings = 6 }: SkeletonProps) => {
   return (
-    <Container spacings={spacings}>
+    <Container spacings={spacings} role='main'>
       {[...Array(lines)].map((_, index) => (
-        <Content key={index} height={height} />
+        <Content key={index} height={height} role='list'/>
       ))}
     </Container>
   );
