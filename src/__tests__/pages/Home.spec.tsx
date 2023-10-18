@@ -36,7 +36,7 @@ describe("Home page", () => {
       </Provider>,
     );
 
-    expect(spy).not.toHaveBeenCalled();
+    expect(spy).toHaveBeenCalled();
 
     spy.mockRestore();
   });
