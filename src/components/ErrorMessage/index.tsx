@@ -4,7 +4,7 @@ import picture from '../../../public/assets/icons/404-error.svg'
 
 const ErrorMessage = () => {
   return (
-    <Container>
+    <Container role='errorFetch'>
       <Image src={picture} alt='Error message'/>
       <span>400 Bad Request Error</span>
     </Container>
