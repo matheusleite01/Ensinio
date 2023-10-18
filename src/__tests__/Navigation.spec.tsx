@@ -2,6 +2,13 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import Navigation from "@/components/Navigation/index";
 
+jest.mock("react-i18next", () => ({
+  useTranslation: jest.fn().mockReturnValue({
+    t: (str: string) => str,
+  }),
+}));
+
+
 describe("Navigation Component", () => {
   it("should render Nav", () => {
     const links = [
@@ -44,5 +51,19 @@ describe("Navigation Component", () => {
     });
 
     expect(precos).toHaveAttribute("href", /*'/preco'*/ "#")
-  })
+  });
+
+  it("Should calls useTranslation", () => {
+    const spy = jest.spyOn(require("react-i18next"), "useTranslation");
+    
+    const links = [
+      { name: "Preços", path: "/preco" },
+    ];
+
+    render( <Navigation links={links}/>);
+
+    expect(spy).toHaveBeenCalled();
+
+    spy.mockRestore();
+  });
 });
