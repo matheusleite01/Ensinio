@@ -1,15 +1,14 @@
 import "@testing-library/jest-dom";
-import {screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import CustomDropdown from "@/components/CustomDropdown";
 import { renderWithTheme } from "@/lib/renderWithTheme";
-import Eadicon from "../../public/assets/icons/ead-icon";
+import Eadicon from "../../../public/assets/icons/ead-icon";
 
 jest.mock("react-i18next", () => ({
   useTranslation: jest.fn().mockReturnValue({
     t: (str: string) => str,
   }),
 }));
-
 
 describe("CustomDropdown component", () => {
   it("Should render CustomDropdown", () => {
@@ -19,12 +18,12 @@ describe("CustomDropdown component", () => {
         subText: "Lorem ipsum dolor sit amet",
         icon: <Eadicon />,
       },
-     ]
-    renderWithTheme(<CustomDropdown title="titulo" options={options}/>)
+    ];
+    renderWithTheme(<CustomDropdown title="titulo" options={options} />);
 
-    const title = screen.getByRole('heading', {
-      name: /titulo/i
-    })
+    const title = screen.getByRole("heading", {
+      name: /titulo/i,
+    });
 
     const text = screen.getByText(/crie uma escola online/i);
 
@@ -44,12 +43,12 @@ describe("CustomDropdown component", () => {
         subText: "Lorem ipsum dolor sit amet",
         icon: <Eadicon />,
       },
-     ]
+    ];
 
-    renderWithTheme(<CustomDropdown title="titulo" options={options}/>);
+    renderWithTheme(<CustomDropdown title="titulo" options={options} />);
 
     expect(spy).toHaveBeenCalled();
 
     spy.mockRestore();
   });
-})
+});

@@ -2,7 +2,7 @@ import "@testing-library/jest-dom";
 import { screen } from "@testing-library/react";
 import HeroTitle from "@/components/HeroTitle";
 import { renderWithTheme } from "@/lib/renderWithTheme";
-import DevicesMobileIcon from "../../public/assets/icons/DevicesMobile-icon";
+import DevicesMobileIcon from "../../../public/assets/icons/DevicesMobile-icon";
 
 jest.mock("react-i18next", () => ({
   useTranslation: jest.fn().mockReturnValue({
