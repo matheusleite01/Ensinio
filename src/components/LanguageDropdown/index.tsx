@@ -5,7 +5,7 @@ import UsaIcon from "../../../public/assets/icons/usa-icon";
 import SpainIcon from "../../../public/assets/icons/spain-icon";
 import CheckIcon from "../../../public/assets/icons/Check-icon";
 import useLanguageDropdown from "./hooks/useLanguageDropdown";
-import useOutsideClick from "@/hooks/useOutsideClick";
+import useOutsideClick from "../../hooks/useOutsideClick";
 
 const languages = [
   { name: "PT", icon: <BrazilIcon /> },

@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import * as S from './styled';
 import React, { useRef } from 'react';
-import useOutsideClick from '@/hooks/useOutsideClick';
+import useOutsideClick from '../../hooks/useOutsideClick';
 
 type DropdownProps = {
   title: string;

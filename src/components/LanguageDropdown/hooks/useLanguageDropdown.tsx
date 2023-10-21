@@ -1,6 +1,6 @@
-import useOutsideClick from "@/hooks/useOutsideClick";
-import { useAppDispatch, useAppSelector } from "@/redux/configureStore";
-import { changeLanguage } from "@/redux/reducers/language";
+import useOutsideClick from "../../../hooks/useOutsideClick";
+import { useAppDispatch, useAppSelector } from "../../../redux/configureStore";
+import { changeLanguage } from "../../../redux/reducers/language";
 import { MouseEventHandler, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 

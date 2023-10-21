@@ -1,5 +1,5 @@
-import { useAppDispatch, useAppSelector } from "@/redux/configureStore"
-import { featchResources } from "@/redux/reducers/apiResources";
+import { useAppDispatch, useAppSelector } from "../../../redux/configureStore"
+import { featchResources } from "../../../redux/reducers/apiResources";
 import { useEffect } from "react";
 
 type LanguagesModal = {
