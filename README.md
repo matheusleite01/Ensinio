@@ -19,6 +19,7 @@ O projeto em questão envolve o desenvolvimento de uma aplicação destinada a c
 [![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+![Storybook](https://img.shields.io/badge/storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white) 
 
 <br>
 
@@ -118,8 +119,12 @@ Depois de clonar e instalar o projeto
 - Rode `npm run storybook`
 - Pronto 🎉
 
+### Demonstração: 
 
 
+
+
+https://github.com/matheusleite01/Ensinio/assets/94021070/9a105912-2703-47bd-8297-298fc75a7b54
 
 
 
