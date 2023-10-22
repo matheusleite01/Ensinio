@@ -101,6 +101,25 @@ i18n.use(initReactI18next).init({
 
 export default i18n;
 ```
+<br>
+
+# 📝  Storybook
+
+### O que e ? 
+O Storybook é uma ferramenta poderosa e versátil usada no desenvolvimento de interfaces de usuário (UI) e componentes em diversos projetos de software. Ele serve como um ambiente de desenvolvimento isolado, onde você pode criar, visualizar e testar seus componentes de maneira interativa.
+
+### Para que serve ?
+O Storybook desempenha um papel fundamental ao permitir que os desenvolvedores criem e documentem componentes de forma isolada, tornando mais fácil a construção de interfaces de alta qualidade e a colaboração em equipes de desenvolvimento. Ele é especialmente útil para designers e desenvolvedores trabalharem juntos, garantindo que os componentes funcionem conforme o esperado, antes de serem integrados ao aplicativo principal.
+
+### Como rodar na minha máquina?
+
+Depois de clonar e instalar o projeto
+
+- Rode `npm run storybook`
+- Pronto 🎉
+
+
+
 
 
 

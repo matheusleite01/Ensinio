@@ -64,7 +64,7 @@ export const ButtonLanguage = styled.button`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   animation: 1s ease 0s 1 normal none running ${animaButton};
-
+  margin: 0 !important;
   &.active {
     background: linear-gradient(
       90deg,
